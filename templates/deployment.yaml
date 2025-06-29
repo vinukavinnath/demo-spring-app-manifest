@@ -45,11 +45,11 @@ spec:
               containerPort: {{ .Values.service.containerPort }}
               protocol: TCP
           {{- with .Values.livenessProbe }}
-          livenessProbe:
+          # livenessProbe:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.readinessProbe }}
-          readinessProbe:
+          # readinessProbe:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.resources }}
